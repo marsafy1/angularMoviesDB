@@ -1,5 +1,18 @@
 <div class="top-movies-container">
+    <!-- <div class="top-movies-container__title">
+        <div class="top-movies-container__title__text">
+            Top 3 Movies
+        </div>
+    </div> -->
     <div *ngFor="let movie of movies; index as i">
             <app-top-movie-item [movie]="movie" [rank] = "i+1"></app-top-movie-item>
+    </div>
+    <div class="top-movies-container__slider">
+        <div class="top-movies-container__slider__container">
+
+            <div (click) = "changePage(0)" [ngClass]="{'top-movies-container__slider__container__l-edge': true, 'top-movies-container__slider__container__l-edge__active': currPage==0}"></div>
+            <div (click) = "changePage(1)" [ngClass]="{'top-movies-container__slider__container__center': true, 'top-movies-container__slider__container__center__active': currPage==1}"></div>
+            <div (click) = "changePage(2)" [ngClass]="{'top-movies-container__slider__container__r-edge': true, 'top-movies-container__slider__container__r-edge__active': currPage==2}"></div>
+        </div>
     </div>
 </div>

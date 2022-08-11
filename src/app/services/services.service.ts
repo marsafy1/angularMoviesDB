@@ -12,11 +12,38 @@ export class ServicesService {
   constructor(private http: HttpClient) {
 
   }
-
+  
+  data:any;
   getPopularMovies(){
-    return this.http.get<any>(this.mainUrl);
+    return this.http.get<any>(this.mainUrl)
   }
-
+  getTopPopularMovies(){
+    var topMovies = [];
+    var topOne = {vote_average:-1, index: 0};
+    var topTwo = {vote_average:-1, index: 0};
+    var topThree = {vote_average:-1, index: 0};
+    var movies:any = [];
+    this.getPopularMovies().subscribe((data)=>{
+        console.log(data);
+        movies = data.results
+        for(var i = 0 ; i < movies.length; i++){
+          if(movies[i].vote_average > topOne.vote_average){
+            topOne = {vote_average: movies[i].vote_average, index:i};
+          }
+        }
+        for(var i = 0 ; i < movies.length; i++){
+          if(movies[i].vote_average > topTwo.vote_average && topOne.index !== topTwo.index){
+            topTwo = {vote_average: movies[i].vote_average, index:i};
+          }
+        }
+        for(var i = 0 ; i < movies.length; i++){
+          if(movies[i].vote_average > topThree.vote_average && topThree.index !== topTwo.index && topThree.index !== topOne.index){
+            topThree = {vote_average: movies[i].vote_average, index:i};
+          }
+        }
+    })
+    return [movies[topOne.index], movies[topTwo.index], movies[topThree.index]]
+  }
   toDo(){
     return "Hi";
   }
