@@ -1,9 +1,9 @@
 @import "../../../variables.scss";
 
+
 .top-movie-item{
     position: relative;
     height: 100%;
-
     background: linear-gradient(45deg, $primary-color, $seconday-color);
     overflow: hidden;
     border-radius: 20px;
@@ -12,7 +12,7 @@
     // 0 0 0.8rem $primary-color,
     // 0 0 0.8rem $primary-color,
     // 0 0 0.8rem $primary-color;
-
+    // height: 300px;
 
     &__img{
         height: 100%;

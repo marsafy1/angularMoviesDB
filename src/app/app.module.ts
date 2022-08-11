@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from './app.component';
 import { TopMovieComponent } from './components/top-movie/top-movie.component';
 import { NormalMovieComponent } from './components/normal-movie/normal-movie.component';
@@ -38,7 +38,8 @@ import { MovieModalViewComponent } from './movie-modal-view/movie-modal-view.com
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

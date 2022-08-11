@@ -1,13 +1,14 @@
 @import "../../../variables.scss";
 .top-movies-container{
-    display:flex;
-    justify-content: space-around;
-    align-items: stretch;
+    // display:flex;
+    // justify-content: space-around;
+    // align-items: stretch;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr auto;
     grid-template-columns: repeat(1, 1fr);
     //grid-gap: 25px;
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
     height: 100%;
     // margin-top:20px;
     &__title{
@@ -73,4 +74,3 @@
     }
   }
 }
-
