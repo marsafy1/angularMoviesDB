@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+@font-face {
+    font-family: 'Lora';
+    src: url('./assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf'); /* IE9 Compat Modes */
+
+  }
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body,html{
+
+    height: 100%;
+    width: 100%;
+    background-color: $primay-background-color !important;
+    font-family: 'Lora';
+}
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+

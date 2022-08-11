@@ -1,0 +1,26 @@
+<div class="normal-movie-item">
+    <div class="normal-movie-item__img__movie-info">
+        <div>
+            <h2>{{ movie.title }}</h2>
+        </div>
+
+        <div class="normal-movie-item__img__movie-info__details">
+            
+            <div><p> {{ movie.release_date }} </p></div>
+            <div><small>Genere</small></div>
+            <div><small>{{ movie.vote_average }}</small></div>
+
+            <div [ngStyle]="{'margin-top':'20px'}">
+                <app-details-modal ></app-details-modal>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="normal-movie-item__img">
+        <div class="normal-movie-item__img__clean-border"></div>
+        
+        <img  [src]=image />
+    </div>
+ 
+</div>

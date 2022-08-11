@@ -1,0 +1,13 @@
+.top-movies-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: stretch;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    //grid-gap: 25px;
+    padding: 50px;
+    height: 100%;
+    // margin-top:20px;
+}
+

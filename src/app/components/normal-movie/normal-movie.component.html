@@ -1,0 +1,26 @@
+<div class="normal-movies-container">
+    <div class="normal-movies-container__title">
+        <div class="normal-movies-container__title__text">
+            Popular Movies
+        </div>
+    </div>
+    <div *ngFor="let movie of displayedMovies">
+            <app-normal-movie-item [movie]="movie"></app-normal-movie-item>
+    </div>
+
+
+    <div class="normal-movies-container__pagination">
+
+        <div [ngStyle]="{'margin-right':'10px'}">
+            <app-secondary-button (btnAction)="changePage(-10)" text="Back"></app-secondary-button>
+        </div>
+        <div>
+            <app-secondary-button (btnAction)="changePage(+10)" text="Next"></app-secondary-button>
+        </div>
+        
+
+    </div>
+    
+
+   
+</div>

@@ -1,0 +1,53 @@
+@import "../../../variables.scss";
+
+.search-bar{
+
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+
+    
+    &__input-container{
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 3px;
+        background: linear-gradient(45deg, $primary-color, $seconday-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__input{
+            height: 100%;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background-color: $primay-background-color;
+            color: white;
+            padding: 10px;
+            font-size: 23px;
+
+            outline: none;
+        }
+        &__input::placeholder {
+            background: linear-gradient($primary-color, $seconday-color);
+            -webkit-background-clip: text;
+                    background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+      
+        
+    }
+}
+
+// .search{
+
+//     font-weight: bolder;
+//     color:transparent;
+//     background: linear-gradient(45deg, $primary-color, $seconday-color);
+//     -webkit-background-clip: text;
+    
+// }
+
+
+

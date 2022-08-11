@@ -1,0 +1,79 @@
+@import "../../../variables.scss";
+.normal-movie-item:hover {
+    .normal-movie-item__img__movie-info{
+        opacity: 1;
+        box-shadow:
+        0 0 4rem $primary-color,
+        0 0 4rem $primary-color,
+        0 0 4rem $seconday-color;
+    }
+   
+}
+.normal-movie-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    height: $normal-movie-item-height;
+
+    margin: 20px;
+
+    background: linear-gradient(45deg, $primary-color, $seconday-color);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition: all 0.4s;
+    &__img{
+        &__clean-border{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%; 
+           
+        }
+
+        &__movie-info{
+            transition: all 0.4s;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            height: 100%; 
+            background: linear-gradient(45deg, $primary-color-light, $seconday-color-light);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__details{
+                p{
+                    font-weight: bolder;
+                }
+                small{
+                    font-weight: lighter;
+                }
+
+            }
+        }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left:0;
+        top:0;
+       
+    
+       
+    }
+}

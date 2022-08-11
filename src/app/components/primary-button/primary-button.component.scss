@@ -1,0 +1,27 @@
+@import "../../../variables.scss";
+.primary-btn-container{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 3px;
+    background: linear-gradient(45deg, $primary-color, $seconday-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__primary-btn{
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: auto;
+        border-radius: 10px;
+        background-color: transparent;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+       
+    }
+}

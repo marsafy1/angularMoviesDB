@@ -1,0 +1,30 @@
+<div class="top-movie-item">
+
+    <div class="top-movie-item__img">    
+        <img class="top-movie-item__img__img" [src]=image />
+        <div class="top-movie-item__img__overlayer">
+            <div class="top-movie-item__img__overlayer__info">
+
+                <div class="top-movie-item__img__overlayer__info__text">
+                    <div [ngStyle]="{'font-size':'40px'}">
+                        <h1>{{ movie.title }}</h1>
+                    </div>
+                    <div>
+                        <p> {{ movie.overview }} </p>
+                    </div>
+                </div>
+
+                <div class="top-movie-item__img__overlayer__info__more">
+                    <div class="top-movie-item__img__overlayer__info__more__rank">
+                        #{{ rank }}
+                    </div>
+                    <div>
+                        <app-details-modal [movie]="movie"></app-details-modal>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
