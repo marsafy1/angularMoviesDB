@@ -1,9 +1,8 @@
 <div class="search-bar">
-    <form class="search-bar__input-container" >
+    <form class="search-bar__input-container">
  
             <input (keyup)="onKey($event)" class="search-bar__input-container__input title" type="text" placeholder="Search"/>
             <div (click)="onSubmit()" [ngStyle]="{'padding-left':'10px','padding-right':'10px','cursor':'pointer'}">Search</div>
-    
 
     </form>
 </div>

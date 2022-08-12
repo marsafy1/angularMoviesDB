@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from '@angular/router';
+import {MatIconModule} from '@angular/material/icon';
 
 import appRoutes from './routerConfig';
 
@@ -47,7 +48,8 @@ import { NormalViewComponent } from './components/normal-view/normal-view.compon
     HttpClientModule,
     BrowserAnimationsModule,
     RouterModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

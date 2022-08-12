@@ -11,8 +11,10 @@
             
             <div class="movie-modal-container__info__main-info__extras">
                 <div>{{fromParent.release_date}}</div>
-                <div>Action</div>
-                <div>{{fromParent.adult === true}}</div>        
+                <div class="movie-modal-container__info__main-info__extras__generes">
+                    <div class="movie-modal-container__info__main-info__extras__generes__genere" *ngFor="let genre of fromParent.genres">{{genre.name}}</div>
+                </div>
+                <div class="movie-modal-container__info__main-info__extras__adult">{{adult}}</div>        
             </div>
         </div>
         <div class="movie-modal-container__info__overview">
@@ -21,8 +23,23 @@
             </div>
            <div class="movie-modal-container__info__overview__options">
                 <div class="movie-modal-container__info__overview__options__rating">
-                    <div>Vote Average</div>
-                    <div>Vote Count</div>
+                    <div class="movie-modal-container__info__overview__options__rating__info"> 
+                        <div>
+                            Average Vote
+                        </div>
+                        <div>
+                            {{fromParent.vote_average}} 
+                        </div>
+                    </div>
+                    <div class="movie-modal-container__info__overview__options__rating__info"> 
+                        <div>
+                            Vote Count
+                        </div>
+                        <div>
+                            {{ fromParent.vote_count }}
+                        </div>
+                    </div>                    
+                  
                 </div>
                 <div> <app-primary-button  text="Watch"></app-primary-button> </div>
          

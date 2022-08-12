@@ -1,8 +1,0 @@
-@import "../../variables.scss";
-.tmp{
-    border: 2px solid lime;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-rows: calc($top-movies-height - $nav-bar-height/2 + 35%) calc($normal-movies-height - $nav-bar-height/2);
-}

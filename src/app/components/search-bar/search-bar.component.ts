@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ServicesService
  } from 'src/app/services/services.service';
 @Component({
@@ -12,17 +12,24 @@ export class SearchBarComponent implements OnInit {
 
   }
   searchInput: string = "";
+  data:any=[];
+  @Output() outputEmitter = new EventEmitter<any>();
+
+
 
   onKey(event:any) {
     const inputValue = event.target.value;
     this.searchInput = event.target.value;
   }
 
+
   onSubmit(){
+    console.log(this.searchInput);
     if(this.searchInput !== '')
-      this.servicesService.getSearchedMovies(this.searchInput).subscribe((data)=>{console.log(data)});
+      this.servicesService.getSearchedMovies(this.searchInput).subscribe((data)=>{this.data = data;  this.outputEmitter.emit(data);});
     else
       alert("Can't be empty :)")
+   
   }
   ngOnInit(): void {
   }

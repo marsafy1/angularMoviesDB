@@ -11,11 +11,24 @@ export class NormalMovieComponent implements OnInit {
 
 
   movies: any[] = [];
+  originalMovies: any[] = [];
   displayedMovies: any[] = [];
   page = 0;
+  items:any[]= ['item1', 'item2', 'item3', 'item4'];
+
+  goBack(){
+    this.movies = this.originalMovies;
+    this.displayedMovies = this.movies.slice(this.page, this.page + 10);
+  }
   
+  changeContent(newItem: any) {
+  
+    this.movies = newItem.results;
+    this.displayedMovies = this.movies.slice(this.page, this.page + 10);
+  }
+
   getMovies(){
-    this.servicesService.getPopularMovies().subscribe(data => {this.movies = data.results; this.movies = this.movies; this.displayedMovies = this.movies.slice(this.page, this.page + 10)});
+    this.servicesService.getPopularMovies().subscribe(data => {this.movies = data.results; this.originalMovies = this.movies; this.displayedMovies = this.movies.slice(this.page, this.page + 10)});
   }
 
   ngOnInit(): void {

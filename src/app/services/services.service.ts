@@ -11,7 +11,7 @@ export class ServicesService {
   mainUrl = "https://api.themoviedb.org/3/movie/popular?api_key=8ca7086260d6440956c15917b02b2ef1&language=en-US";
 
   popularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${this.api_key}&language=en-US`;
-
+  detailedUrl = `https://api.themoviedb.org/3/movie/343611?api_key=${this.api_key}&language=en-US`
   constructor(private http: HttpClient) {
 
   }
@@ -21,6 +21,9 @@ export class ServicesService {
     return this.http.get<any>(this.popularUrl)
   }
 
+  getDetailedMovie(id: number){
+    return this.http.get<any>(`https://api.themoviedb.org/3/movie/${id}?api_key=${this.api_key}&language=en-US`)
+  }
   getSearchedMovies(searchInput:string){
 
     var searchWords = searchInput.split(' ');

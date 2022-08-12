@@ -48,3 +48,29 @@ body,html{
 app-movie-modal-view{
     height: 100%;
 }
+app-search-bar{
+    width: 100%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.backdrop{
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    opacity: 1 !important;
+    filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
+
+}
+
+.mat-icon{
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.material-icons{
+    color: transparent !important;
+    font-size: 60px !important;
+}

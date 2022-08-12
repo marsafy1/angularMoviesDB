@@ -4,6 +4,17 @@
             Popular Movies
         </div>
     </div>
+    <!-- search -->
+
+    <div class="normal-movies-container__search">
+        <div class="normal-movies-container__search__back" (click)="goBack()">
+            <mat-icon aria-hidden="false" aria-label="Original Movies" fontIcon="local_movies"></mat-icon>
+        </div>
+        <app-search-bar (outputEmitter)="changeContent($event)"></app-search-bar>
+    </div>
+    
+
+
     <div *ngFor="let movie of displayedMovies">
             <app-normal-movie-item [movie]="movie"></app-normal-movie-item>
     </div>
