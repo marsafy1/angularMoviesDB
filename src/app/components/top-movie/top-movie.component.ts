@@ -11,7 +11,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './top-movie.component.html',
   styleUrls: ['./top-movie.component.scss'],
   animations: [
-    trigger('animation', [
+    trigger('changingAnimation', [
       transition(':enter', [
         style({opacity: 0 }),  // initial
         animate('1s',
@@ -30,7 +30,7 @@ export class TopMovieComponent implements OnInit {
   mySubscription: Subscription;
 
   constructor(private servicesService: ServicesService) { 
-     this.mySubscription= interval(10000).subscribe((x =>{
+     this.mySubscription= interval(100000).subscribe((x =>{
                 this.changePage(this.currPage + 1);
             }));
   }
@@ -45,7 +45,7 @@ export class TopMovieComponent implements OnInit {
   getMovies(){
     //this.movies = this.servicesService.getTopPopularMovies();
     //console.log(this.servicesService.getTopPopularMovies());
-    this.servicesService.getPopularMovies().subscribe(data => {this.movies = data.results.slice(0,3); this.displayedMovie = [this.movies[0]] });
+    this.servicesService.getPopularMovies().subscribe(data => {this.movies = data.results.slice(6,9); this.displayedMovie = [this.movies[0]] });
   }
 
   changePage(page: number){

@@ -4,7 +4,7 @@
             Top 3 Movies
         </div>
     </div> -->
-    <div @animation *ngFor="let movie of displayedMovie index as i">
+    <div @changingAnimation *ngFor="let movie of displayedMovie index as i">
             <app-top-movie-item   [movie]="movie" [rank] = "currPage + 1"></app-top-movie-item>
     </div>
     <div class="top-movies-container__slider">

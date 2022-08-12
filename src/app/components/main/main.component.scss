@@ -6,7 +6,9 @@
     height: 100%;
     color: black;
     display: grid;
-    grid-template-rows: $nav-bar-height calc($top-movies-height - $nav-bar-height/2 + 30%) calc($normal-movies-height - $nav-bar-height/2);
+    // grid-template-rows: $nav-bar-height auto;
+    
+    grid-template-rows: $nav-bar-height calc($top-movies-height - $nav-bar-height/2 + 50%) calc($normal-movies-height - $nav-bar-height/2);
     &__nav-bar{
         height: $nav-bar-height;
         // HOW SO ?

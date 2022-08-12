@@ -1,0 +1,20 @@
+.custom-class {
+    float: right;
+    border: 12px solid blue;
+    border-radius: 20px;
+}
+.tutorial {
+    position: fixed;
+    top: auto;
+    bottom: 0px;
+   
+    min-width: 100%;
+    .modal-dialog{
+        margin: 0;
+        border: 2px solid red !important;
+        min-width: 100%;
+        }
+    }
+.main{
+    border-radius: 100px !important;
+}

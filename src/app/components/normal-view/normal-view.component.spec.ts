@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailedMovieComponent } from './detailed-movie.component';
+import { NormalViewComponent } from './normal-view.component';
 
-describe('DetailedMovieComponent', () => {
-  let component: DetailedMovieComponent;
-  let fixture: ComponentFixture<DetailedMovieComponent>;
+describe('NormalViewComponent', () => {
+  let component: NormalViewComponent;
+  let fixture: ComponentFixture<NormalViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailedMovieComponent ]
+      declarations: [ NormalViewComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DetailedMovieComponent);
+    fixture = TestBed.createComponent(NormalViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

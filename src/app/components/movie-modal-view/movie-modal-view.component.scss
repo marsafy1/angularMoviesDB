@@ -1,0 +1,108 @@
+@import "../../../variables.scss";
+
+.movie-modal-container{
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(45deg, $primary-color, $seconday-color);
+    //padding: 30px;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 20px !important;
+  
+    &__info{
+   
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left:0;
+        top:0;  
+        //padding: 50px;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        z-index: 100;
+        color:white;
+        &__main-info{
+            padding: 50px;
+            grid-column: 1/-1;
+            .title{
+                font-size: 80px;
+                font-weight: bolder;
+                color:white;
+               
+                line-height: 100%;
+            }
+            &__extras{
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                font-weight: lighter;
+            }
+            &__extras *{
+                margin-right: 10px;
+            }
+        }
+        &__overview{
+        
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            border-top-right-radius:40px ;
+            // border-bottom-right-radius:40px ;
+            // border-top-left-radius:40px ;
+            //background:linear-gradient(45deg, $primary-color-light, $seconday-color-light);
+            background:linear-gradient(45deg, $primary-color-light-2, $seconday-color-light-2);
+            backdrop-filter: blur(10px);
+            &__options{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 40px;
+                width: 100%;
+                &__rating{
+                    display: flex;
+                    align-items: start;
+                   
+                }
+                &__rating *{
+                    
+                    margin-right: 20px;
+                }
+                
+            }
+
+            &__btn{
+                margin-top: 40px;
+                margin-right: 20px;
+                border: 2px solid blue;
+            }
+        }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left:0;
+        top:0;  
+    }
+   
+    &__img{
+        width: 100%;
+        height: 100%;
+        &__effect{
+            position: absolute;
+            left:0;
+            top:0;  
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+           
+            background: rgba(0, 0, 0, 0.526);
+        }
+    }
+}
+

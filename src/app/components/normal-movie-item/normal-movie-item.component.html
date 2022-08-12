@@ -11,7 +11,7 @@
             <div><small>{{ movie.vote_average }}</small></div>
 
             <div [ngStyle]="{'margin-top':'20px'}">
-                <app-details-modal ></app-details-modal>
+                <app-details-modal [movie]="movie"></app-details-modal>
             </div>
         </div>
         

@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { RouterModule } from '@angular/router';
+
+import appRoutes from './routerConfig';
+
 import { AppComponent } from './app.component';
 import { TopMovieComponent } from './components/top-movie/top-movie.component';
 import { NormalMovieComponent } from './components/normal-movie/normal-movie.component';
-import { DetailedMovieComponent } from './components/detailed-movie/detailed-movie.component';
 import { MainComponent } from './components/main/main.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -16,14 +19,15 @@ import { SecondaryButtonComponent } from './components/secondary-button/secondar
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsModalComponent } from './components/details-modal/details-modal.component';
 import { TopMoviesSlidesComponent } from './components/top-movies-slides/top-movies-slides.component';
-import { MovieModalViewComponent } from './movie-modal-view/movie-modal-view.component';
+import { MovieModalViewComponent } from './components/movie-modal-view/movie-modal-view.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { NormalViewComponent } from './components/normal-view/normal-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopMovieComponent,
     NormalMovieComponent,
-    DetailedMovieComponent,
     MainComponent,
     SearchBarComponent,
     NavBarComponent,
@@ -33,13 +37,17 @@ import { MovieModalViewComponent } from './movie-modal-view/movie-modal-view.com
     SecondaryButtonComponent,
     DetailsModalComponent,
     TopMoviesSlidesComponent,
-    MovieModalViewComponent
+    MovieModalViewComponent,
+    SearchResultsComponent,
+    NormalViewComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

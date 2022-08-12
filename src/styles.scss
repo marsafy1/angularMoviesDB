@@ -1,5 +1,10 @@
 @import "./variables.scss";
 
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+
 @font-face {
     font-family: 'Lora';
     src: url('./assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf'); /* IE9 Compat Modes */
@@ -20,9 +25,26 @@ body,html{
     font-family: 'Lora';
 }
 
+.modal-content{
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-radius: 20px !important;
+    overflow: hidden; 
 
+    width: 100% !important;
+    height: 100% !important;
+}
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+.modal{
+    width: 100% !important;
+    height: 100% !important;
+    --bs-modal-width: 80% !important;
+}
 
+.modal-dialog{
+    height: 80% !important;
+}
 
+app-movie-modal-view{
+    height: 100%;
+}

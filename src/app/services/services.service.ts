@@ -8,15 +8,34 @@ import { Observable, throwError } from 'rxjs';
 })
 export class ServicesService {
   api_key = "fe5bad60eac91ea51d5b412ad20049e2";
-  mainUrl = "https://api.themoviedb.org/3/movie/popular?api_key=8ca7086260d6440956c15917b02b2ef1&language=en-US"
+  mainUrl = "https://api.themoviedb.org/3/movie/popular?api_key=8ca7086260d6440956c15917b02b2ef1&language=en-US";
+
+  popularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${this.api_key}&language=en-US`;
+
   constructor(private http: HttpClient) {
 
   }
   
   data:any;
   getPopularMovies(){
-    return this.http.get<any>(this.mainUrl)
+    return this.http.get<any>(this.popularUrl)
   }
+
+  getSearchedMovies(searchInput:string){
+
+    var searchWords = searchInput.split(' ');
+    var query = "";
+    for(const word of searchWords){
+      query += word+"+";
+    }
+ 
+    return this.http.get<any>(`https://api.themoviedb.org/3/search/movie?api_key=${this.api_key}&query=${query}`);
+
+  }
+
+
+
+
   getTopPopularMovies(){
     var topMovies = [];
     var topOne = {vote_average:-1, index: 0};

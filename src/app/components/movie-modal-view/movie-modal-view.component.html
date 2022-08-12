@@ -1,0 +1,34 @@
+<div class="movie-modal-container">
+    <div class="movie-modal-container__img">
+        <div class="movie-modal-container__img__effect"></div>
+        <img src={{image}}/>
+    </div>
+    <div class="movie-modal-container__info">
+        <div class="movie-modal-container__info__main-info">
+            <div class="title">
+                {{fromParent.title}}
+            </div>
+            
+            <div class="movie-modal-container__info__main-info__extras">
+                <div>{{fromParent.release_date}}</div>
+                <div>Action</div>
+                <div>{{fromParent.adult === true}}</div>        
+            </div>
+        </div>
+        <div class="movie-modal-container__info__overview">
+            <div>
+                {{fromParent.overview}}
+            </div>
+           <div class="movie-modal-container__info__overview__options">
+                <div class="movie-modal-container__info__overview__options__rating">
+                    <div>Vote Average</div>
+                    <div>Vote Count</div>
+                </div>
+                <div> <app-primary-button  text="Watch"></app-primary-button> </div>
+         
+           </div>
+ 
+        </div>
+        
+    </div>
+</div>
