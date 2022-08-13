@@ -14,7 +14,7 @@ export class DetailsModalComponent {
     this.servicesService.getDetailedMovie(this.movie.id).subscribe((data)=>{this.data = data})
   }
   open() {
-    const modalRef = this.modalService.open(MovieModalViewComponent, {centered:true, backdropClass:'backdrop'});
+    const modalRef = this.modalService.open(MovieModalViewComponent,{backdropClass:"backdrop"});
     modalRef.componentInstance.name = 'Movie Details';
     modalRef.componentInstance.fromParent = this.data;
     

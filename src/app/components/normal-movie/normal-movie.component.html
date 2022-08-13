@@ -1,4 +1,4 @@
-<div class="normal-movies-container">
+<div [ngClass]="{'normal-movies-container': true}">
     <div class="normal-movies-container__title">
         <div class="normal-movies-container__title__text">
             Popular Movies
@@ -8,21 +8,33 @@
 
     <div class="normal-movies-container__search">
         <div class="normal-movies-container__search__back" (click)="goBack()">
-            <mat-icon aria-hidden="false" aria-label="Original Movies" fontIcon="local_movies"></mat-icon>
+            <mat-icon class="movies-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="local_movies"></mat-icon>
         </div>
-        <app-search-bar (outputEmitter)="changeContent($event)"></app-search-bar>
+        <div class="normal-movies-container__search__content" (click)="goBack()">
+            <app-search-bar (outputEmitter)="changeContent($event)"></app-search-bar>
+        </div>
+        
     </div>
-    
+    <div class="normal-movies-container__filters">
+        <app-secondary-button (btnAction)="changeGenre(28)" text="Action" [checked]="objFilters[28]"></app-secondary-button>
+        <app-secondary-button (btnAction)="changeGenre(35)" text="Comedy" [checked]="objFilters[35]"></app-secondary-button>
+        <app-secondary-button (btnAction)="changeGenre(18)" text="Drama" [checked]="objFilters[18]"></app-secondary-button>
+    </div>
 
 
+    <div *ngIf="!notEmpty" class="empty-movies-container__no-results">
+        No Results Were Found.
+    </div>
     <div *ngFor="let movie of displayedMovies">
             <app-normal-movie-item [movie]="movie"></app-normal-movie-item>
     </div>
 
 
+
+
     <div class="normal-movies-container__pagination">
 
-        <div [ngStyle]="{'margin-right':'10px'}">
+        <div [ngStyle]="{'margin-right':'1vw'}">
             <app-secondary-button (btnAction)="changePage(-10)" text="Back"></app-secondary-button>
         </div>
         <div>

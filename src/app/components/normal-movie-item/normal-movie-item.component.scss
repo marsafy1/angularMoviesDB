@@ -16,7 +16,7 @@
     align-items: center;
     border: 2px solid black;
     height: $normal-movie-item-height;
-
+    min-height: 300px;
     margin: 20px;
 
     background: linear-gradient(45deg, $primary-color, $seconday-color);
@@ -54,15 +54,48 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            
 
             &__details{
+              
+                display: flex;
+                flex-direction: column;
                 p{
                     font-weight: bolder;
+                    font-size: 1.4vw;
                 }
                 small{
                     font-weight: lighter;
+                    font-size: 1.2vw;
                 }
+                &__icon{
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    .big-icon{
+                        font-size: 2vw !important;  
+                    }
+                    &__star{
+                        
+                        background: linear-gradient(45deg, yellow, orange);
+                        -webkit-background-clip: text;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
+                    }
+
+                    &__pop{
+                        
+                        background: linear-gradient(45deg, red, orange);
+                        -webkit-background-clip: text;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                    }
+                }
             }
         }
     }
@@ -74,3 +107,5 @@
         top:0;  
     }
 }
+
+

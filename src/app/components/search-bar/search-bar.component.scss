@@ -17,6 +17,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        &__btn{
+            padding-left: 1vw;
+            padding-right: 1vw;
+            font-size: 1.7vw;
+        }
         &__input{
             height: 100%;
             width: 100%;
@@ -24,10 +29,17 @@
             border-radius: 10px;
             background-color: $primay-background-color;
             color: white;
-            padding: 10px;
-            font-size: 23px;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+
+            // font-size: 23px;
+            font-size: 1.7vw;
 
             outline: none;
+            
+
         }
         &__input::placeholder {
             background: linear-gradient($primary-color, $seconday-color);

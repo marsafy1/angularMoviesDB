@@ -7,7 +7,19 @@
         <div class="normal-movie-item__img__movie-info__details">
             
             <div><p> {{ movie.release_date }} </p></div>
-            <div><small>{{ movie.vote_average }}</small></div>
+            <div class="normal-movie-item__img__movie-info__details__icon">
+                <div class="golden-icon-container">
+                    <mat-icon class="transparent-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="star"></mat-icon>
+                </div>
+                <small>{{ movie.vote_average }}</small>
+            </div>
+            <div class="normal-movie-item__img__movie-info__details__icon">
+                <div class="fire-icon-container">
+                    <mat-icon class="transparent-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="whatshot"></mat-icon>
+                </div>
+
+                <small>{{ movie.popularity }}</small>
+            </div>
 
             <div [ngStyle]="{'margin-top':'20px'}">
                 <app-details-modal [movie]="movie"></app-details-modal>

@@ -1,7 +1,7 @@
 @import "../../../variables.scss";
 
 .movie-modal-container{
-
+    
     position: relative;
     width: 100%;
     height: 100%;
@@ -21,15 +21,15 @@
         //padding: 50px;
         display:grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto;
+        grid-template-rows: 2fr 1fr;
         z-index: 100;
         color:white;
         &__main-info{
             padding: 50px;
             grid-column: 1/-1;
           
-            .title{
-                font-size: 80px;
+            &__title{
+                font-size: 5vw;
                 font-weight: bolder;
                 color:white;
                
@@ -40,6 +40,7 @@
                 display: flex;
                 align-items: center;
                 font-weight: lighter;
+                font-size: 1.1vw;
                 &__adult{
                     margin-left:30px;
                     padding: 10px;
@@ -67,8 +68,11 @@
             }
         }
         &__overview{
-        
-            padding: 30px;
+            
+            font-size: 1.3vw;
+            line-height: 100%;
+            font-weight: lighter;
+            padding: 2vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -90,15 +94,22 @@
                     align-items: start;
                     &__info{
                         display: flex;
-                        padding: 10px;
+                        align-items: center;
+                        justify-content: space-around;
+                    
+                        padding: 10px;  
                         border-radius: 5px;
                         //background: rgba(135, 126, 1, 0.742);
+                        &__icon{
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            padding-right:0.5vw ;
+
+                        }
                     }
                 }
-                &__rating *{
-                    
-                    margin-right: 20px;
-                }
+
                 
             }
 
@@ -133,3 +144,15 @@
     }
 }
 
+
+
+@media only screen and (max-width: 800px) {
+    .movie-modal-container__info__overview{
+        grid-column: 1/-1;
+        font-size: 2vh;
+        border-top-right-radius:0px;
+    }
+    .movie-modal-container__info__main-info__title{
+        font-size: 5vh;
+    }
+}

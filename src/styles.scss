@@ -55,6 +55,14 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
+.modal{
+    // border: 12px solid blue;
+}
+.dialog{
+    // border: 12px solid red;
+    width: 100px;
+    height: 100px;
+}
 .backdrop{
     background-color: rgba(0, 0, 0, 0.3) !important;
     opacity: 1 !important;
@@ -63,14 +71,56 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 }
 
+
 .mat-icon{
     height: 100% !important;
     width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    
 }
-.material-icons{
+.transparent-icon{
     color: transparent !important;
-    font-size: 60px !important;
 }
+.yellow-icon{
+    color:yellow !important;
+}
+.red-icon{
+    color:red !important;
+}
+.white-icon{
+    color:white !important;
+}
+.v-big-icon{
+    font-size: 2vw !important;
+}
+
+
+
+.golden-icon-container{
+    background: linear-gradient(45deg, yellow, orange);
+    -webkit-background-clip: text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.fire-icon-container{
+    background: linear-gradient(45deg, red, orange);
+    -webkit-background-clip: text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// mat-icon{
+//     height: 100% !important;
+//     width: 100% !important;
+//     display: flex !important;
+//     justify-content: center !important;
+//     align-items: center !important;
+    
+// }
+// .material-icons{
+   
+//     color: transparent !important;
+//     font-size: 5vw !important;
+// }

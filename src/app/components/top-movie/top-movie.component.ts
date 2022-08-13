@@ -45,7 +45,7 @@ export class TopMovieComponent implements OnInit {
   getMovies(){
     //this.movies = this.servicesService.getTopPopularMovies();
     //console.log(this.servicesService.getTopPopularMovies());
-    this.servicesService.getPopularMovies().subscribe(data => {this.movies = data.results.slice(6,9); this.displayedMovie = [this.movies[0]] });
+    this.servicesService.getPopularMovies().subscribe(data => {this.movies = data.results.slice(0,3); this.displayedMovie = [this.movies[0]] });
   }
 
   changePage(page: number){

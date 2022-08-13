@@ -1,5 +1,5 @@
 <div class="secondary-btn-container">
-    <button (click)="onClick()" class="secondary-btn-container__secondary-btn">
+    <button (click)="onClick()" [ngClass]="{'secondary-btn-container__secondary-btn': true, 'checked': checked}" >
         {{text}}
     </button>
 </div>

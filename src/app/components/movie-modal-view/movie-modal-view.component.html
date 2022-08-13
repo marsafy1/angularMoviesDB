@@ -5,7 +5,7 @@
     </div>
     <div class="movie-modal-container__info">
         <div class="movie-modal-container__info__main-info">
-            <div class="title">
+            <div class="movie-modal-container__info__main-info__title">
                 {{fromParent.title}}
             </div>
             
@@ -24,16 +24,16 @@
            <div class="movie-modal-container__info__overview__options">
                 <div class="movie-modal-container__info__overview__options__rating">
                     <div class="movie-modal-container__info__overview__options__rating__info"> 
-                        <div>
-                            Average Vote
+                        <div class="movie-modal-container__info__overview__options__rating__info__icon">
+                            <mat-icon class="yellow-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="stars"></mat-icon>
                         </div>
                         <div>
                             {{fromParent.vote_average}} 
                         </div>
                     </div>
                     <div class="movie-modal-container__info__overview__options__rating__info"> 
-                        <div>
-                            Vote Count
+                        <div class="movie-modal-container__info__overview__options__rating__info__icon">
+                            <mat-icon class="white-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="people"></mat-icon>
                         </div>
                         <div>
                             {{ fromParent.vote_count }}

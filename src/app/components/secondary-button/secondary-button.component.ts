@@ -9,6 +9,7 @@ export class SecondaryButtonComponent implements OnInit {
 
   constructor() { }
   @Input() text: string = "Empty";
+  @Input() checked: boolean = false;
   @Output() btnAction: EventEmitter<any> = new EventEmitter();
   ngOnInit(): void {
   }
