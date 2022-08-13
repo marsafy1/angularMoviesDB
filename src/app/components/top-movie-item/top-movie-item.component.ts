@@ -36,11 +36,19 @@ export class TopMovieItemComponent implements OnInit {
   image = "";
  
   constructor() { }
-  
+  hideImg:boolean =false;
+  hideImage() {
+    // this.image = "../../../assets/images/eren_kid.png";
+    this.hideImg = true;
+  }
   ngOnInit(): void {
-    console.log(this.movie);
+
     this.popularMovie = this.movie;
-    this.image = "https://image.tmdb.org/t/p/original/"+this.movie.backdrop_path;
+    if(this.movie !== null){
+      this.image = "https://image.tmdb.org/t/p/original/"+this.movie.backdrop_path;
+      this.hideImg = false;
+    }
+
   
   }
 

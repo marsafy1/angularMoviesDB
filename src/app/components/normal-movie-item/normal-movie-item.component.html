@@ -31,7 +31,10 @@
     <div class="normal-movie-item__img">
         <div class="normal-movie-item__img__clean-border"></div>
         
-        <img  [src]=image />
+        <img  [ngStyle]="{'opacity':hideImg? 0:1}" (error) = "hideImage()" [src]=image />
+        <div *ngIf="!imgExists || hideImg" class="normal-movie-item__img__title">
+            {{ movie.title }}
+        </div>
     </div>
  
 </div>

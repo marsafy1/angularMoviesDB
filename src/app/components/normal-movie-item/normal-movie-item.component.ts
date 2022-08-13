@@ -10,9 +10,19 @@ export class NormalMovieItemComponent implements OnInit {
   @Input() movie:any;
   constructor() { }
   image = "";
-  ngOnInit(): void {
+  imgExists = false;
+  hideImg:boolean = false;
+  hideImage() {
+    // this.image = "../../../assets/images/eren_kid.png";
+    this.hideImg = true;
+  }
 
-    this.image = "https://image.tmdb.org/t/p/original/"+this.movie.poster_path;
+  ngOnInit(): void {
+    if(this.movie.backdrop_path !== null){
+      this.imgExists = true;
+      this.hideImg = false;
+      this.image = "https://image.tmdb.org/t/p/original/"+this.movie.poster_path;
+    }
   
   }
   

@@ -10,11 +10,20 @@ export class MovieModalViewComponent implements OnInit {
   constructor() { }
   image:any;
   adult:string ='18-';
-  genres = [{"name":'De7k'}];
+  hideImg:boolean = false;
+  hideImage(){
+    this.hideImg = true;
+  }
   ngOnInit(): void {
-    this.image = "https://image.tmdb.org/t/p/original/"+this.fromParent.backdrop_path;
+    if(this.fromParent.backdrop_path){
+      this.image = "https://image.tmdb.org/t/p/original/"+this.fromParent.backdrop_path;
+      this.hideImg = false;
+    }
+    else{
+      this.hideImg = true;
+    }
     this.adult = this.fromParent.adult === true? "18+":"18-";
-    console.log(this.fromParent);
+    
   }
 
 }

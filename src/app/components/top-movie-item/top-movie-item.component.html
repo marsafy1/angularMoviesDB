@@ -1,7 +1,7 @@
 <div class="top-movie-item">
 
     <div class="top-movie-item__img">    
-        <img class="top-movie-item__img__img" [src]=image />
+        <img [ngStyle]="{'opacity':hideImg? 0:1}" class="top-movie-item__img__img" (error)="hideImage()" [src]=image />
         <div class="top-movie-item__img__overlayer">
             <div class="top-movie-item__img__overlayer__info">
 

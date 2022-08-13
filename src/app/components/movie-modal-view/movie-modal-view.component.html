@@ -1,7 +1,7 @@
 <div class="movie-modal-container">
     <div class="movie-modal-container__img">
         <div class="movie-modal-container__img__effect"></div>
-        <img src={{image}}/>
+        <img [ngStyle]="{'opacity':hideImg? 0:1}" (error) = "hideImage()" src={{image}}/>
     </div>
     <div class="movie-modal-container__info">
         <div class="movie-modal-container__info__main-info">
@@ -24,8 +24,8 @@
            <div class="movie-modal-container__info__overview__options">
                 <div class="movie-modal-container__info__overview__options__rating">
                     <div class="movie-modal-container__info__overview__options__rating__info"> 
-                        <div class="movie-modal-container__info__overview__options__rating__info__icon">
-                            <mat-icon class="yellow-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="stars"></mat-icon>
+                        <div class="golden-icon-container">
+                            <mat-icon class="transparent-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="star"></mat-icon>
                         </div>
                         <div>
                             {{fromParent.vote_average}} 
@@ -33,12 +33,21 @@
                     </div>
                     <div class="movie-modal-container__info__overview__options__rating__info"> 
                         <div class="movie-modal-container__info__overview__options__rating__info__icon">
-                            <mat-icon class="white-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="people"></mat-icon>
+                            <mat-icon class="white-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="people"></mat-icon>
                         </div>
                         <div>
                             {{ fromParent.vote_count }}
                         </div>
-                    </div>                    
+                    </div>   
+                    <div class="movie-modal-container__info__overview__options__rating__info"> 
+                        <div class="fire-icon-container">
+                            <mat-icon class="transparent-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="whatshot"></mat-icon>
+                        </div>
+                        <div>
+                            {{fromParent.popularity}} 
+                        </div>
+                    </div>                   
+                    
                   
                 </div>
                 <div> <app-primary-button  text="Watch"></app-primary-button> </div>
