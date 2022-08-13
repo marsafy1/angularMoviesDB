@@ -1,8 +1,8 @@
 <div class="search-bar">
-    <form class="search-bar__input-container">
+    <div class="search-bar__input-container">
  
-            <input (keyup)="onKey($event)" class="search-bar__input-container__input title" type="text" placeholder="Search"/>
+            <input (keyup.enter)="onSubmit()" (keyup)="onKey($event)" class="search-bar__input-container__input title" type="text" placeholder="Search"/>
             <div (click)="onSubmit()" class="search-bar__input-container__btn" >Search</div>
 
-    </form>
+    </div>
 </div>

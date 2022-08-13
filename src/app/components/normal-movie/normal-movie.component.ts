@@ -95,7 +95,6 @@ export class NormalMovieComponent implements OnInit {
       return;
     }    
   
-    //console.log(this.movies.length - 9, this.movies.length);
     this.page += value;
     this.displayedMovies = this.movies.slice(this.page , this.page + 10);
     

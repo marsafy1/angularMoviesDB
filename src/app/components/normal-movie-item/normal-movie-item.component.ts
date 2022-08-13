@@ -23,6 +23,10 @@ export class NormalMovieItemComponent implements OnInit {
       this.hideImg = false;
       this.image = "https://image.tmdb.org/t/p/original/"+this.movie.poster_path;
     }
+    else{
+      this.imgExists = false;
+      this.hideImg = false;
+    }
   
   }
   

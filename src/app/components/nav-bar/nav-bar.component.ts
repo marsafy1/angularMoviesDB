@@ -13,10 +13,5 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  test(){
-    this.service.getPopularMovies().subscribe(data => console.log(data));
-    //console.log(this.service.getPopularMovies());
-    
-   
-  }
+
 }

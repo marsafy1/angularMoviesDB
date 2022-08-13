@@ -24,7 +24,6 @@ export class SearchBarComponent implements OnInit {
 
 
   onSubmit(){
-    console.log(this.searchInput);
     if(this.searchInput !== '')
       this.servicesService.getSearchedMovies(this.searchInput).subscribe((data)=>{this.data = data;  this.outputEmitter.emit(data);});
     else
