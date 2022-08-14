@@ -21,18 +21,26 @@ export class ServicesService {
     var data = this.http.get<any>(this.popularUrl)
     return data;
   }
-
+  compute(){
+    return 77;
+  }
   getDetailedMovie(id: number){
     return this.http.get<any>(`https://api.themoviedb.org/3/movie/${id}?api_key=${this.api_key}&language=en-US`)
   }
   getSearchedMovies(searchInput:string){
-
-    var searchWords = searchInput.split(' ');
+    
+   
+    
     var query = "";
-    for(const word of searchWords){
-      query += word+"+";
+
+    if(searchInput !== ""){
+      var searchWords = searchInput.split(' ');
+      for(const word of searchWords){
+        query += word+"+";
+      }
     }
- 
+    console.log("this is the query", query);
+    console.log("I"+query+"I");
     return this.http.get<any>(`https://api.themoviedb.org/3/search/movie?api_key=${this.api_key}&query=${query}&sort_by=popularity.desc`);
 
   }

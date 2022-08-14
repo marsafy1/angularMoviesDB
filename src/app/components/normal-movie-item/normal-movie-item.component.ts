@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NormalMovieItemComponent implements OnInit {
 
-  @Input() movie:any;
+  @Input() movie:any ={"title":''};
   constructor() { }
   image = "";
   imgExists = false;
@@ -18,7 +18,7 @@ export class NormalMovieItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.movie.backdrop_path !== null){
+    if(this.movie && this.movie.backdrop_path !== null){
       this.imgExists = true;
       this.hideImg = false;
       this.image = "https://image.tmdb.org/t/p/original/"+this.movie.poster_path;

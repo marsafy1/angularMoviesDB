@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./movie-modal-view.component.scss']
 })
 export class MovieModalViewComponent implements OnInit {
-  @Input() fromParent: any;
+  @Input() fromParent: any ={"title":''};;
   constructor() { }
   image:any;
   adult:string ='18-';
@@ -15,14 +15,15 @@ export class MovieModalViewComponent implements OnInit {
     this.hideImg = true;
   }
   ngOnInit(): void {
-    if(this.fromParent.backdrop_path){
+    if(this.fromParent && this.fromParent.backdrop_path){
       this.image = "https://image.tmdb.org/t/p/original/"+this.fromParent.backdrop_path;
       this.hideImg = false;
+      this.adult = this.fromParent.adult === true? "18+":"18-";
     }
     else{
       this.hideImg = true;
     }
-    this.adult = this.fromParent.adult === true? "18+":"18-";
+   
     
   }
 
