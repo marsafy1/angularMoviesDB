@@ -29,7 +29,7 @@
             grid-column: 1/-1;
           
             &__title{
-                font-size: 5vw;
+                font-size: max(3vh, 5vw);
                 font-weight: bolder;
                 color:white;
                
@@ -156,7 +156,5 @@
         font-size: 2vh;
         border-top-right-radius:0px;
     }
-    .movie-modal-container__info__main-info__title{
-        font-size: 5vh;
-    }
+
 }
