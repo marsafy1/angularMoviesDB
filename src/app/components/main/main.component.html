@@ -14,7 +14,17 @@
         <div class="main-container__movies__normal-movies">
             <app-normal-movie ></app-normal-movie>
         </div>
-
+        <div class="main-container__footer">
+            <div class="main-container__footer__contacts">
+                <div [ngStyle]="{'margin':'1.3vh'}">Contact Us </div>
+                <div class="main-container__footer__contacts__icons">
+                    <div><mat-icon class="white-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="email"></mat-icon></div>
+                    <div><mat-icon class="white-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="local_phone"></mat-icon></div>
+                    <div><mat-icon class="white-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="message"></mat-icon></div>
+                </div>
+            </div>
+            
+        </div>
         <!-- <app-normal-view></app-normal-view> -->
         <!-- <router-outlet></router-outlet> -->
     </div>

@@ -1,4 +1,7 @@
 @import "../../../variables.scss";
+
+
+
 .normal-movie-item:hover {
     .normal-movie-item__img__movie-info{
         opacity: 1;
@@ -27,6 +30,13 @@
 
     transition: all 0.4s;
     &__img{
+        &__img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left:0;
+            top:0;  
+        }
         &__title{
             
             width: 100%;
@@ -58,11 +68,24 @@
             backdrop-filter: blur(10px);
             padding: 20px;
             color: white;
-
+            h2{
+                font-size: max(2vh,2vw);
+            }
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             
+
+            &__img-container{
+                display: none !important;
+                
+
+                &__img{
+                    position: relative;
+                    width: 75%;
+                    height: 100%;
+                }
+            }
 
             &__details{
               
@@ -70,11 +93,11 @@
                 flex-direction: column;
                 p{
                     font-weight: bolder;
-                    font-size: 1.4vw;
+                    font-size: max(1.4vh,1.4vw);
                 }
                 small{
                     font-weight: lighter;
-                    font-size: 1.2vw;
+                    font-size: max(1.2vh,1.2vw);
                 }
                 &__icon{
                     display:flex;
@@ -82,7 +105,7 @@
                     align-items: center;
                     
                     .big-icon{
-                        font-size: 2vw !important;  
+                        font-size: max(2vh,2vw) !important;  
                     }
                     &__star{
                         
@@ -107,13 +130,29 @@
             }
         }
     }
-    img{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left:0;
-        top:0;  
-    }
+
 }
 
 
+
+
+@media only screen and (max-width: $phones-width) and (hover: none){
+    .normal-movie-item__img__movie-info{
+        opacity: 1;
+        box-shadow:
+        0 0 4rem $primary-color,
+        0 0 4rem $primary-color,
+        0 0 4rem $seconday-color;
+
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: auto 50% auto;
+
+    }
+    .normal-movie-item__img__movie-info__img-container{
+        display: block !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}

@@ -45,6 +45,7 @@ body,html{
     height: 80% !important;
 }
 
+
 app-movie-modal-view{
     height: 100%;
 }
@@ -111,16 +112,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     align-items: center;
 }
 
-// mat-icon{
-//     height: 100% !important;
-//     width: 100% !important;
-//     display: flex !important;
-//     justify-content: center !important;
-//     align-items: center !important;
-    
-// }
-// .material-icons{
-   
-//     color: transparent !important;
-//     font-size: 5vw !important;
-// }
+@media screen and (max-width: $phones-width) {
+    .modal-dialog{
+        height: 50% !important;
+    }
+}

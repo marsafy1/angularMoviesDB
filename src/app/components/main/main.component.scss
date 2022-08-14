@@ -1,6 +1,7 @@
 @import "../../../variables.scss";
 
 .main-container{
+
     position: relative;
     width: 100%;
     height: 100%;
@@ -8,7 +9,7 @@
     display: grid;
     // grid-template-rows: $nav-bar-height auto;
     
-    grid-template-rows: $nav-bar-height calc($top-movies-height - $nav-bar-height/2 + 50%) calc($normal-movies-height - $nav-bar-height/2);
+    grid-template-rows: $nav-bar-height calc($top-movies-height - $nav-bar-height/2 + 50%) auto 15%;
     &__nav-bar{
         height: $nav-bar-height;
         // HOW SO ?
@@ -25,5 +26,36 @@
             position: relative;
             height: 100%;
         }
+    }
+    &__footer{
+        position: relative;
+        height: 100%;
+        background: linear-gradient(45deg, $primary-color-light-2, $seconday-color-light-2);
+        backdrop-filter: blur(10px);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__contacts{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__icons{
+                display: flex;
+                align-items: center;
+            }
+            &__icons *{
+                cursor: pointer;
+                margin-left: 0.5vw;
+                margin-right: 0.5vw;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-container{
+        grid-template-rows: 8% calc($top-movies-height - $nav-bar-height/2) auto 15%;
     }
 }

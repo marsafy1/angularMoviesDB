@@ -7,6 +7,7 @@
     <div @changingAnimation *ngFor="let movie of displayedMovie index as i">
             <app-top-movie-item   [movie]="movie" [rank] = "currPage + 1"></app-top-movie-item>
     </div>
+    <div [ngStyle]="{'display':displayedMovie.length === 0? 'none':'block'}"></div>
     <div class="top-movies-container__slider">
         <div class="top-movies-container__slider__container">
 

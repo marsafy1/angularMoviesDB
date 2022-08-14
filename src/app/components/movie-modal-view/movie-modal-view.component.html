@@ -10,7 +10,7 @@
             </div>
             
             <div class="movie-modal-container__info__main-info__extras">
-                <div>{{fromParent.release_date}}</div>
+                <div [ngStyle]="{'font-size':'0.8vh'}">{{fromParent.release_date}}</div>
                 <div class="movie-modal-container__info__main-info__extras__generes">
                     <div class="movie-modal-container__info__main-info__extras__generes__genere" *ngFor="let genre of fromParent.genres">{{genre.name}}</div>
                 </div>
