@@ -20,9 +20,7 @@ import { PrimaryButtonComponent } from './components/primary-button/primary-butt
 import { SecondaryButtonComponent } from './components/secondary-button/secondary-button.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DetailsModalComponent } from './components/details-modal/details-modal.component';
-import { TopMoviesSlidesComponent } from './components/top-movies-slides/top-movies-slides.component';
 import { MovieModalViewComponent } from './components/movie-modal-view/movie-modal-view.component';
-import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { NormalViewComponent } from './components/normal-view/normal-view.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -42,9 +40,7 @@ import { environment } from '../environments/environment';
     PrimaryButtonComponent,
     SecondaryButtonComponent,
     DetailsModalComponent,
-    TopMoviesSlidesComponent,
     MovieModalViewComponent,
-    SearchResultsComponent,
     NormalViewComponent
   ],
   imports: [

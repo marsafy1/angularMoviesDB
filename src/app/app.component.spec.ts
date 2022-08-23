@@ -26,6 +26,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('moviesDB app is running!');
+    expect(compiled.querySelector('span#text')?.textContent).toContain('moviesDB app is running!');
   });
 });
