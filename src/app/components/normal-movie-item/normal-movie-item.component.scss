@@ -69,7 +69,7 @@
             padding: 20px;
             color: white;
             h2{
-                font-size: max(2vh,2vw);
+                font-size: max(2vh,2vw, 35px);
             }
             display: flex;
             flex-direction: column;
@@ -88,16 +88,17 @@
             }
 
             &__details{
-              
+             
                 display: flex;
                 flex-direction: column;
+               
                 p{
                     font-weight: bolder;
-                    font-size: max(1.4vh,1.4vw);
+                    font-size: max(1.4vh,1.4vw, 20px);
                 }
                 small{
                     font-weight: lighter;
-                    font-size: max(1.2vh,1.2vw);
+                    font-size: max(1.2vh,1.2vw, 20px);
                 }
                 &__icon{
                     display:flex;
@@ -105,7 +106,7 @@
                     align-items: center;
                     
                     .big-icon{
-                        font-size: max(2vh,2vw) !important;  
+                        font-size: max(2vh,2vw, 30px) !important;  
                     }
                     &__star{
                         

@@ -19,15 +19,20 @@
         <app-secondary-button (btnAction)="changeGenre(28)" text="Action" [checked]="objFilters[28]"></app-secondary-button>
         <app-secondary-button (btnAction)="changeGenre(35)" text="Comedy" [checked]="objFilters[35]"></app-secondary-button>
         <app-secondary-button (btnAction)="changeGenre(18)" text="Drama" [checked]="objFilters[18]"></app-secondary-button>
+        <app-secondary-button text="Sign Up"></app-secondary-button>
     </div>
 
 
     <div *ngIf="!notEmpty" class="empty-movies-container__no-results">
         No Results Were Found.
     </div>
-    <div *ngFor="let movie of displayedMovies">
-            <app-normal-movie-item [movie]="movie"></app-normal-movie-item>
+
+    <div class="normal-movies-container__movies">
+        <div *ngFor="let movie of displayedMovies" class="normal-movies-container__movies__movie">
+                <app-normal-movie-item [movie]="movie"></app-normal-movie-item>
+        </div>
     </div>
+
 
 
 

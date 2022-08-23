@@ -1,10 +1,11 @@
 @import "../../../variables.scss";
 .secondary-btn-container{
+    cursor: pointer;
     height: 100%;
     width: 100%;
     border: none;
     border-radius: 10px;
-    padding: 3px;
+    padding: 0.2vw;
     background: linear-gradient(45deg, $primary-color, $seconday-color);
     display: flex;
     justify-content: center;

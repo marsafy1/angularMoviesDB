@@ -7,26 +7,26 @@
 
                 <div class="top-movie-item__img__overlayer__info__text">
                     <div >
-                        <h1 [ngStyle]="{'font-size':'max(3vh, 5vw)'}">{{ movie.title }}</h1>
+                        <h1 class="title">{{ movie.title }}</h1>
                         <div class="top-movie-item__img__overlayer__info__text__extras">
                             <div class="icons-container">
                                 <div class="golden-icon-container">
-                                    <mat-icon class="transparent-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="star"></mat-icon>
+                                    <mat-icon class="transparent-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="star"></mat-icon>
                                 </div>
-                                <small >{{ movie.vote_average }}</small>
+                                <small class="info">{{ movie.vote_average }}</small>
                             </div>
                             <div class="icons-container">
                                 <div class="fire-icon-container">
-                                    <mat-icon class="transparent-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="whatshot"></mat-icon>
+                                    <mat-icon class="transparent-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="whatshot"></mat-icon>
                                 </div>
                 
-                                <small>{{ movie.popularity }}</small>
+                                <small class="info">{{ movie.popularity }}</small>
                             </div>
                             
                         </div>
                     </div>
-                    <div>
-                        <p [ngStyle]="{'font-size':'max(0.8vh, 1.3vw)'}"> {{ movie.overview }} </p>
+                    <div class="top-movie-item__img__overlayer__info__text__overview">
+                        <h3 class="overview"> {{ movie.overview }} </h3>
                     </div>
                 </div>
 

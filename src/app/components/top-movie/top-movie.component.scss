@@ -41,7 +41,7 @@
         width: 7.5vw;
         cursor: pointer;
         margin-right: 5px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.362);
 
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -55,7 +55,7 @@
         width: 7.5vw;
         cursor: pointer;
 
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.362);
         &__active{
           background: linear-gradient(45deg, $primary-color, $seconday-color);
         }
@@ -66,7 +66,7 @@
         width: 7.5vw;
         cursor: pointer;
         margin-left: 5px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.362);
 
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
