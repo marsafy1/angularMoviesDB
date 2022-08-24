@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'moviesDB';
-  ngAfterViewInit() {
-    window.location.reload(); 
- }
+
 }
