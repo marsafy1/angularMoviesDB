@@ -46,7 +46,7 @@
         //here, replaced the old grid layout with a flex-box layout
         display: flex;
         flex-wrap: wrap;
-        justify-content: start;
+        justify-content: space-around;
         align-items: center;
       
         width: 100%;
