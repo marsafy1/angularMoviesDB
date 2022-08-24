@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { TopMovieComponent } from './top-movie.component';
 
 describe('TopMovieComponent', () => {
@@ -8,6 +8,7 @@ describe('TopMovieComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports :[HttpClientModule],
       declarations: [ TopMovieComponent ]
     })
     .compileComponents();

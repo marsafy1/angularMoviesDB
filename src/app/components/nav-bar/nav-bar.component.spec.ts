@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar.component';
 
 describe('NavBarComponent', () => {
@@ -8,6 +8,7 @@ describe('NavBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ NavBarComponent ]
     })
     .compileComponents();

@@ -6,11 +6,12 @@ import { ServicesService } from 'src/app/services/services.service';
 @Component({selector: 'app-details-modal', templateUrl: './details-modal.component.html'})
 export class DetailsModalComponent {
   constructor(private modalService: NgbModal, private servicesService:ServicesService) {}
-  @Input() movie: any;
+  @Input() movie: any = {id:""};
  
   data = {};
   ngOnInit(){
     this.data = this.movie;
+
     this.servicesService.getDetailedMovie(this.movie.id).subscribe((data)=>{this.data = data})
   }
   open() {
