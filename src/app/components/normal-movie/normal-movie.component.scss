@@ -30,6 +30,7 @@
     width: 100%;
     display: grid;
 
+    //this is not the grid of the movies/
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: auto;
 
@@ -41,9 +42,11 @@
     &__movies{
         grid-column: 1/-1;
         overflow: scroll;
+
+        //here, replaced the old grid layout with a flex-box layout
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: start;
         align-items: center;
       
         width: 100%;
