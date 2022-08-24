@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+
     height: $normal-movie-item-height;
     min-height: 300px;
     margin: 20px;
@@ -134,10 +134,31 @@
 
 }
 
-
+@media only screen and (max-width: 900px){
+    .normal-movie-item{
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .normal-movie-item{
+        height: 250px;
+    }
+    #date{
+        display: none;
+    }
+    .normal-movie-item__img__movie-info{
+        h2{
+            font-size: 20px;
+        }  
+    }
+}
 
 
 @media only screen and (max-width: $phones-width) and (hover: none){
+
+    #date{
+        display: none;
+    }
     .normal-movie-item__img__movie-info{
         opacity: 1;
         box-shadow:
@@ -155,5 +176,33 @@
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
+        
+        img{
+            border-radius: 5px;
+        }
+    }
+    .normal-movie-item__img__movie-info{
+        h2{
+            font-size: max(1vw, 1vh, 20px);
+        }  
+    }
+    .normal-movie-item__img__movie-info__details{
+        p{
+            font-weight: bolder;
+            font-size: max(1vh,1vw, 15px);
+        }
+        small{
+            font-weight: lighter;
+            font-size: max(0.5vh,0.5vw, 15px);
+        }
+        .normal-movie-item__img__movie-info__details__icon{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+          
+            .big-icon{
+                font-size: 25px!important;  
+            }
+        }
     }
 }

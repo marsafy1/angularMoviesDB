@@ -106,15 +106,17 @@
                 align-items: center;
                 margin-top: 40px;
                 width: 100%;
+            
                 &__rating{
                     display: flex;
                     align-items: start;
                
                     &__info{
                         display: flex;
+                    
                    
                         justify-content: space-around;
-                
+                        align-items: center;
                         height: 100%;
                         padding: 10px;  
                         border-radius: 5px;
@@ -122,6 +124,7 @@
                         mat-icon{
                             font-size: max(1.5vw,1.5vh, 20px);
                         }
+                       
                         &__icon{
                             display: flex;
                             justify-content: flex-end;

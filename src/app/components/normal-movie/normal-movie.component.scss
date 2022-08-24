@@ -35,7 +35,7 @@
 
 
 
-    margin-top:30px;
+    margin-top:3vh;
     padding: 30px;
 
     &__movies{
@@ -57,7 +57,7 @@
         padding-right: 20px;
     
         display: flex;
-        min-height: 50px;
+        
         align-items: center;
       
         margin-left: calc(20px + 5%);
@@ -146,3 +146,9 @@
 //         grid-template-columns: repeat(1, 1fr);
 //     }
 // }
+
+@media only screen and (max-width: 500px) {
+    .normal-movies-container__movies__movie{
+        flex-basis: 250px;
+    }
+}

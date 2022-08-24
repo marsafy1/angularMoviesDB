@@ -28,7 +28,7 @@
                             <mat-icon class="transparent-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="star"></mat-icon>
                         </div>
                         <div>
-                            <p>{{fromParent.vote_average}} </p>
+                            {{fromParent.vote_average}} 
                         </div>
                     </div>
                     <div class="movie-modal-container__info__overview__options__rating__info"> 
@@ -36,7 +36,7 @@
                             <mat-icon class="white-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="people"></mat-icon>
                         </div>
                         <div>
-                            <p>{{ fromParent.vote_count }}</p>
+                            {{ fromParent.vote_count }}
                         </div>
                     </div>   
                     <div class="movie-modal-container__info__overview__options__rating__info"> 
@@ -50,7 +50,7 @@
                     
                   
                 </div>
-                <div> <app-primary-button  text="Watch"></app-primary-button> </div>
+                <div [ngStyle]="{'height':'100%'}"> <app-primary-button  text="Watch"></app-primary-button> </div>
          
            </div>
  

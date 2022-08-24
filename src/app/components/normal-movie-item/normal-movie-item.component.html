@@ -16,7 +16,7 @@
         </div>
         <div class="normal-movie-item__img__movie-info__details">
             
-            <div><p> {{ movie.release_date }} </p></div>
+            <div><p id="date"> {{ movie.release_date }} </p></div>
             <div class="normal-movie-item__img__movie-info__details__icon">
                 <div class="golden-icon-container">
                     <mat-icon class="transparent-icon big-icon" aria-hidden="false" aria-label="Original Movies" fontIcon="star"></mat-icon>
@@ -31,7 +31,7 @@
                 <small>{{ movie.popularity }}</small>
             </div>
 
-            <div [ngStyle]="{'margin-top':'20px'}">
+            <div [ngStyle]="{'margin-top':'10px'}">
                 <app-details-modal [movie]="movie"></app-details-modal>
             </div>
         </div>

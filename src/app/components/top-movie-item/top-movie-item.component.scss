@@ -67,7 +67,7 @@
                         //background-color:rgba(0, 0, 0, 0.15);
                         border-radius: 10px;
                         .overview{
-                            font-size: max(3vh,1.7vw);
+                            font-size: max(2.3vh,1.7vw);
                            
                             font-weight: lighter;
                         }
@@ -154,5 +154,11 @@
     align-items: center;
     mat-icon{
         font-size: max(2vh, 2vw);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .top-movie-item__img__overlayer__info__text__overview{
+        display: none;
     }
 }
