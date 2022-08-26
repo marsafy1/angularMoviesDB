@@ -30,7 +30,7 @@ export class TopMovieComponent implements OnInit {
   mySubscription: Subscription;
 
   constructor(private servicesService: ServicesService) { 
-     this.mySubscription= interval(100000).subscribe((x =>{
+     this.mySubscription= interval(10000).subscribe((x =>{
                 this.changePage(this.currPage + 1);
             }));
   }
